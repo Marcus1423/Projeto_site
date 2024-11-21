@@ -1,0 +1,193 @@
+:root{
+    --cor-textos-princial: #BBE1FA;
+    --cor-textos-secudaria: #3282B8;
+    --cor-backgrond: #1B262C;
+    --cor-shadow: rgba(102, 97, 97, 0.2);
+    --cor-focus: #E0E0F8;
+    --cor-hover: #0F4C75;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--cor-backgrond);
+}
+
+.navegacao{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: var(--cor-hover);
+}
+
+.navegacao a{
+    color: var(--cor-textos-princial);
+}
+
+main{
+    background-color: var(--cor-backgrond);
+    font-family: sans-serif;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 450px;
+    margin: 20px 0;
+    
+}
+
+form{
+    border: solid 2px var(--cor-hover);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#titulo{
+    font-family: sans-serif;
+    color: var(--cor-textos-princial);
+    display: flex;
+    justify-content: center;
+}
+
+#subtitulo{
+    font-family: sans-serif;
+    color: var(--cor-textos-princial);
+    display: flex;
+    justify-content: center;
+}
+
+fieldset{
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+input, select, textarea, button{
+    border-radius: 6px;
+}
+
+#nome, #sobrenome, #email{
+    height: 20.38px;
+    width: 203.38px;
+}
+
+.campo{
+    display: flex;
+}
+
+.campo__item{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.campo label{
+    margin-bottom: 0.2em;
+    color: var(--cor-textos-secudaria);
+    display: block;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo select{
+    padding: 0.2em;
+    border: 1px solid var(--cor-textos-secudaria);
+    box-shadow: 2px 2px 2px var(--cor-shadow);
+    display: block;
+}
+
+.campo select option{
+    padding-right: 1em;
+}
+
+.campo input:focus, .campo select:focus, .campo__escrita textarea:focus{
+    background-color: var(--cor-focus);
+}
+
+fieldset .grupo .campo{
+    float: left;
+    
+}
+
+.campo__escrita{
+    display: flex;
+    justify-self: center;
+}
+
+.campo__escrita__flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.campo__escrita label{
+    color: var(--cor-textos-secudaria);
+}
+
+.campo__escrita textarea{
+    border: 1px solid var(--cor-textos-secudaria);
+    box-shadow: 2px 2px 2px var(--cor-shadow);
+    width: 30em;
+}
+
+.botao{
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: var(--cor-textos-secudaria);
+    border: 0;
+    margin-bottom: 1em;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px var(--cor-shadow);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 33%;
+    margin: 5% 35%;
+}
+
+.botao:hover{
+    background-color: var(--cor-hover);
+    box-shadow: inset 2px 2px 2px var(--cor-shadow);
+    text-shadow: none;
+}
+
+#check{
+    display: inline-block;
+    color: var(--cor-textos-secudaria);
+    margin-top: 10px;
+}
+
+#check__label{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -20px;
+}
+
+.navegacao__item.active{
+    color: red;
+}
+
+.rodape{
+    background-color: var(--cor-hover);
+    color: var(--cor-textos-princial);
+    text-align: center;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 1023px){
+    .navegacao{
+        text-align: center;
+    }
+
+    main{
+        width: 350px;
+        border: none;
+    }
+    
+    .campo__escrita textarea{
+        width: 20em;
+    }
+}
